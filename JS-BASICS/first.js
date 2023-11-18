@@ -84,7 +84,7 @@
 
 //switch case
 
-let role = 'guest'
+// let role = 'guest'
 // switch (role){
 //   case 'guest':
 //     console.log('Guest User')
@@ -226,7 +226,7 @@ let role = 'guest'
 // }
  
 // function to calculate the average grade
-const marks = [80, 80, 80]
+// const marks = [80, 80, 80]
 // 0-59: F
 // 60-69: D
 // 70-79: C
@@ -322,20 +322,687 @@ const marks = [80, 80, 80]
 //   this.radius = radius;
 //   this.draw = function(){
 //     console.log('draw');
+
+//     x: 1,
+//     y: 1
+//   },
+//   isVisible: true,
+//   draw: function(){
+//     console.log('draw');
 //   }
 // }
 
-const circle = new Circle(1);
+// circle.draw();
+
+
+// dynamic nature of objects
+
+// const circle = {
+//   radius: 1
+// };
+
+// circle.color = 'yellow';
+// circle.draw = function() {}
+
+// delete circle.color
+// delete circle.draw
+
+// console.log(circle)
+
+
+// constructor properties
+
+
+// function Circle (radius){
+//   this.radius = radius;
+//   this.draw = function(){
+//     console.log('draw');
+//   }
+
+// }
+
+
+// Circle.call({}, 1)
+
+
+
+// // console.log(Circle.name)
+// // console.log(Circle.length)
+// // console.log(Circle.constructor)
+
+
+// //value vs reference type
+
+// let obj = {value: 10};
+
+
+// function increase(obj){
+//   obj.value++;
+// }
+
+// increase(obj);
+// console.log(obj);
+
+
+// //cloning an object
+
+// const circle = {
+//   radius: 1,
+//   draw() {
+//     console.log('draw');
+//   }
+// }
+
+// // this is the older one
+
+// // const another = {};
+
+// // for (let key in circle)
+// //   another [key] = circle[key]
+
+// // or you can use this one it is a bit modern
+
+// // const another = Object.assign({}, circle);
+
+
+// //while this is even better by  using the spread 
+
+// const another = {...circle};
+
+// console.log(another);
+
+
+// maths objects in javascript
+
+// string objects
+
+// you are now in enumerable object
+// back on cloning an object
+
+// const cirle = {
+//   radius: 1,
+//   draw(){
+//     console.log('draw');
+//   }
+// }
+// // one way to clone an object is by using the object assign method
+// const newAnother = Object.assign({ color: 'yellow'}, cirle);
+// //NB: object.assign copies the properties and methods of
+// //more source object into a traget object
+// // we can use it to clone and object and also combine two or more object
+
+
+// // another way is by using the spread operator
+// const another = {...cirle};
+// // NB: it is used to get all the properties and methods
+// //of an objects and put it in another objects
+
+// console.log(newAnother, another)
+
+//2nd nov 2023
+// continuation of template literal
+// template literals are from es6
+// you can use ${name} to concatenate your string
+// const fname = 'Josy';
+// const another = 
+// `Hi ${fname}
+
+// thank you for joining my mailing list. 
+// Regards,
+// Louis`;
+
+// console.log(another);
+
+// Date objects
+// different ways to create a date object
+
+// const now = new Date();
+// const date1 = new Date('May 11 2018 9:00');
+// const date2 = new Date(2018, 4, 11, 9);
+// now.getDate
+
+//exercise 1 adress 
+
+// const address = {
+//   street: 'Baptist street',
+//   city:'Benin City',
+//   zipCode: 300105,
+// }
+
+// function showAddress(address){
+//   for(let key in address)
+//     console.log(key, address[key])
+// }
+
+// showAddress(address);
+
+
+//exercise 2 object equality
+
+// let address1 = new Address('a', 'b', 'c');
+// let address2 = new Address('a', 'b', 'c');
+
+// //construction Function
+// function Address(street, city, zipCode){
+//   this.street = street;
+//   this.city = city;
+//   this.zipCode = zipCode;
+// }
+
+// function areEqual(address1, address2){
+//   return address1.street===address2.street && address1.city === address2.city && address1.zipCode === address2.zipCode
+// }
+// function areSame(address1, address2){
+//   return address1===address2
+// }
+
+
+// console.log(areEqual(address1, address2))
+// console.log(areSame(address1, address2))
+
+
+//exercise 3 blog post object
+
+// const blogPost = {
+//   title: 'coronavirus',
+//   body: 'letmecome',
+//   author: 'mark',
+//   views: 23,
+//   comment: [
+//     {author: 'josey', body: 'dame'},
+//     {author: 'jude', body: 'jame'}
+//   ],
+//   isLive: true
+// }
+
+// console.log(blogPost)
+
+
+
+//exercise 4 construction function
+
+// const newpost = new Post('r', 'e', 'd');
+
+// function Post (title, body, author){
+//   this.title = title;
+//   this.body = body;
+//   this.author = author;
+//   this.view = 0;
+//   this.comment = [];
+//   this.isLive = false;
+// }
+
+// console.log(newpost)
+
+
+//exercise 5 price range object
+
+
+
+//ARRAYS
+
+// const numbers = [3, 4];
+
+// //add elements to the array
+// //End
+// numbers.push(6,5)
+// //Beginning
+// numbers.unshift(1,2)
+// //middle
+// numbers.splice(2, 0, 'a', 'b')
+
+// console.log(numbers)
+
+
+
+// finding primitive elements in an array
+
+// const numbers = [1, 2, 3, 1, 4]
+
+// console.log(numbers.indexOf(2))
+// console.log(numbers.lastIndexOf(1))
+// console.log(numbers.includes(2))
+
+
+
+// finding reference elements in an array
+
+// const courses = [
+//   { id: 1, name: 'a'},
+//   { id: 2, name: 'b'}
+// ];
+
+// const course = courses.find(function(course){
+//   return course.name === 'a';
+// });
+
+// console.log(course);
+
+
+// // arrow function
+
+// const courses = [
+//   { id: 1, name: 'a'},
+//   { id: 2, name: 'b'}
+// ];
+
+// const course = courses.find(course => {
+//   return course.name === 'a';
+// });
+
+// console.log(course);
+
+
+//removing elements from an array
+
+// let numbers = [1, 2, 3, 4];
+
+// //end
+// // const last = numbers.pop()
+// // console.log(numbers)
+// // console.log(last)
+
+// // //beginning
+// // const first = numbers.shift()
+// // console.log(first)
+// // //middle
+// numbers.splice(2,2)
+// console.log(numbers)
+
+
+// how to empty an array
+
+// solution 1
+// numbers = [];
+
+//solution 2 most preferred cause it will also reference an empty array
+
+// numbers.length = 0;
+
+//solution 3
+// numbers.splice(0, numbers.length)
+
+// //solution 4
+// while(numbers.length > 0)
+//   numbers.pop()
+// console.log(numbers)
+
+
+//combining two arrays
+
+// const first = [1, 2];
+// const second = [3, 4];
+// const combined = first.concat(second);
+// // or use the spread operator
+// const combined1 = [...first, ...second]
+
+// // to copy an array
+// const copy = [...combined]
+// //or
+// const coopy = combined.slice()
+// console.log(copy, coopy)
+
+
+// // iterating an array
+
+// const numbers = [1, 2, 3]
+// // using the for loop
+// for (let number of numbers)
+//   console.log(number)
+
+// //using the forEach callback
+// numbers.forEach((number, index) => {
+//   console.log(index, number);
+// })
+
+//joining an array
+
+// const numbers = [1, 2, 3]
+// const joined = numbers.join(',');
+// console.log(joined);
+
+// const message = 'This is my first message';
+// const parts = message.split(' ');
+// console.log(parts);
+
+// const combined = parts.join('-');
+// console.log(combined);
+
+
+
+//sorting an array in primitive
+
+// const numbers = [2, 3, 1]
+// numbers.sort();
+// console.log(numbers)
+// numbers.reverse()
+// console.log(numbers)
+
+
+//sorting an array in objects
+
+// const courses = [
+//   { id: 1, name: 'Node.js'},
+//   { id: 2, name: 'Javascript'}
+// ];
+
+// courses.sort(function(a, b){
+//   const nameA = a.name.toLowerCase();
+//   const nameB = b.name.toLowerCase();
+//   if (nameA < nameB) return -1;
+//   if(nameA > nameB) return 1;
+//   return 0;
+// });
+// console.log(courses)
+
+
+//testing elements of an array
+
+/*every(), checks to see if every element in a given array matches
+the given criteria
+
+some() checks to see if we have one element that matches the given 
+criteria */
+
+// const numbers = [1, -1, 2, 3];
+// const atLeatOnePositive = numbers.some(function(value){
+//   return value => 0;
+// })
+
+// console.log(atLeatOnePositive)
+
+
+// filtering an array
+
+// const numbers = [1, -1, 2, 3];
+
+// //this example returns only the positive elements of the array
+// const filtered = numbers.filter(value => value >= 0);
+
+// console.log(filtered)
+
+//mapping an array
+/*with this method we can map each element in an array to 
+something else*/
+
+// const numbers = [1, -1, 2, 3];
+
+//this example returns only the positive elements of the array
+// const filtered = numbers.filter(value => value >= 0);
+
+
+//mapping an elements to a string
+// const items = filtered.map(n => '<li>' + n + '</li>');
+
+// const html = '<ul>' + items.join('') + '</ul>';
+// console.log(html);
+
+
+//mapping an element to an object
+
+// const numbers = [1, -1, 2, 3];
+
+// // const filtered = numbers.filter(value => value >= 0);
+
+// // const items = filtered.map(n => ({ value: n}));
+
+// // for best practise you can also chain them
+
+// const items = numbers
+//   .filter(value => value >= 0)
+//   .map(n => ({ value: n}));
+
+// console.log(items);
+
+
+// reducing an array
+
+// const numbers = [1, -1, 2, 3];
+
+
+//using the normal for operator
+
+// let sum = 0;
+
+// for(let n of numbers)
+//   sum +=n
+
+// console.log(sum)
+
+// or using the reduce method
+
+// const sum = numbers.reduce(
+//   (accumulator, currentValue) => accumulator + currentValue
+// );
+
+// console.log(sum)
+
+
+//exercise 
+//array from range
+
+// const numbers = arrayFromRange(1, 50);
+
+// console.log(numbers);
+
+// function arrayFromRange(min, max){
+//   const newArray = [];
+//   for(let i = min; i <= max; i++)
+//     newArray.push(i);
+//   return newArray;
+
+// }
+
+
+
+//exercise include
+
+// const numbers = [1, 2, 3, 4,];
+// // console.log(numbers.includes(1));
+
+// function includes(array, searchElement){
+//   for (let element of array)
+//     if (element === searchElement)
+//       return true;
+    
+
+//   return false;
+// }
+
+// console.log(includes(numbers, 6))
+
+
+//exercise except
+
+// const numbers = [1, 2, 3, 4,];
+// // console.log(numbers.includes(1));
+
+// function except(array, excluded){
+//   const output = [];
+//   for (let element of array)
+//     if(!excluded.includes(element))
+//       output.push(element)
+//   return output;
+    
+// }
+
+// console.log(except(numbers, [1, 2, 6]))
+
+
+//exercise count occurence
+
+// const numbers = [1, 2, 3, 4,]
+
+// const output = countOcurrences(numbers, 1);
+
+// function countOcurrences(array, searchElement){
+//   let count = 0;
+//   for (let element of array)
+//     if(element === searchElement)
+//       count ++
+//     return count;
+// }
+
+// console.log(output);
+
+
+//or
+
+// const numbers = [1, 2, 3, 4]
+// const count = countOccurrrences(numbers, 1)
+// console.log(count);
+
+// function countOccurrrences(array, searchElement){
+//   return array.reduce((accumulator, current) => {
+//     const occurence = (current === searchElement) ? 1 : 0;
+//     return accumulator + occurence;
+//   },0);
+// }
+
+// exercise get max
+
+// remember that anytime you want to get a single value from an
+// array  you use the reduce method for it
+
+// const numbers = [1, 2, 3, 4]
+
+// const max = getMax(numbers);
+// function getMax(array){
+//   if (array.length === 0) return undefined;
+
+//   return array.reduce((a, b) => (b > a) ? b : a);
+// }
+
+// console.log(max)
+
+
+//Exercise 
+
+// const movies = [
+//   { title: 'a', year: 2018, rating: 4.5},
+//   { title: 'b', year: 2018, rating: 4.7},
+//   { title: 'c', year: 2018, rating: 3},
+//   { title: 'd', year: 2017, rating: 4.5},
+// ];
+
+// console.log(movies{title})
 
 
 
 
-function Circle (radius){
-  this.radius = radius;
-  this.draw = function(){
-    console.log('draw');
-  }
+// //  functions in js
+// function walk() {
+//   console.log('walk');
+// }
 
-}
+// walk();
 
-const another = new Circle(1);
+// // funciton expression
+
+// let run = function() {
+//   console.log('run');
+// };
+// let move = run;
+
+// run();
+// move();
+
+//let say that we are trying to build a function
+// to check the discount of more than one prices
+
+// function sum (discount, ...prices) {
+//   const total = prices.reduce((a, b) => a + b);
+//   return total * (1 - discount);
+
+// }
+
+// console.log(sum(0.1, 20, 30));
+
+// default parameters
+
+// function interest (principal, rate, years){
+//   rate = rate || 3.5;
+//   years = years || 5;
+//   return (principal * rate * years) / 100;
+// }
+
+// console.log(interest(10000))
+
+// in modern javascript
+
+// function interest (principal, rate = 3.5, years = 5){
+//   return (principal * rate * years) / 100;
+// }
+
+// console.log(interest(10000, 6, 12))
+
+
+// getters and setters
+
+// const person = {
+//   firstName: 'Joseph',
+//   lastName: 'Louis',
+//   get fullName() {
+//     return `${person.firstName} ${person.lastName}`
+//   },
+//   set fullName(value){
+//     const parts = value.split(' ');
+//     this.firstName = parts[0];
+//     this.lastName = parts[1];
+//   }
+// };
+
+// person.fullName = 'John Smith'
+
+// console.log(person)
+
+
+
+//exercise sum of arguments
+
+// function sum(...values){
+//   if(values.length === 1 && Array.isArray(values[0]))
+//     values = [...values[0]]
+//   return values.reduce((a, b) => a + b );
+// }
+
+// console.log(sum([1,2,3,4,5]));
+
+
+
+//exercise  area of circle
+
+// const circle = {
+//   radius: 2,
+//   get area (){
+//     return Math.PI * this.radius * this.radius;
+//   }
+// }
+
+// circle.radius = 4;
+
+// console.log(circle.area)
+
+
+// //exercise error handling
+
+// try {const numbers = [1, 2, 3, 4]
+// const count = countOccurrrences(true, 1);
+// console.log(count);}
+
+// catch (e){
+//   console.log(e.message)
+// }
+
+// function countOccurrrences(array, searchElement){
+//   if (!Array.isArray(array))
+//     throw new Error('invalid array')
+//   return array.reduce((accumulator, current) => {
+//     const occurence = (current === searchElement) ? 1 : 0;
+//     return accumulator + occurence;
+//   },0);
+// }
+
+
+
+
